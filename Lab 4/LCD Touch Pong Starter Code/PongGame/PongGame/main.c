@@ -19,9 +19,13 @@ char displayChar = 0;
 int main(void)
 {
 	//setting up the gpio for backlight
-	DDRD |= 0x1C;
-	PORTD &= ~0x1C;
+	DDRD |= 0x80;
+	PORTD &= ~0x80;
 	PORTD |= 0x00;
+	
+	DDRB |= 0x05;
+	PORTB &= ~0x05;
+	PORTB |= 0x00;
 	
 	//lcd initialisation
 	lcd_init();
