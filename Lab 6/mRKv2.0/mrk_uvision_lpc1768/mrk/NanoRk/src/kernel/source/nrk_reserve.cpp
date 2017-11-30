@@ -137,7 +137,6 @@ int8_t nrk_reserve_consume (uint8_t reserve_id)
 
   if ((_nrk_reserve[reserve_id].set_access <=
        _nrk_reserve[reserve_id].cur_access)) {
-    // You violated your resource (like MJ after a little boy)
     nrk_int_enable ();
     if (_nrk_reserve[reserve_id].error != NULL)
       _nrk_reserve[reserve_id].error ();
