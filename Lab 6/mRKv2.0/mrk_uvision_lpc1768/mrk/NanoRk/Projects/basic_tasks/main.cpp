@@ -129,7 +129,7 @@ void nrk_create_taskset()
     
     nrk_task_set_entry_function( &TaskOne, Task1);
     nrk_task_set_stk( &TaskOne, Stack1, NRK_APP_STACKSIZE);
-    TaskOne.prio = 2;
+    TaskOne.prio = 1;
     TaskOne.FirstActivation = TRUE;
     TaskOne.Type = BASIC_TASK;
     TaskOne.SchType = PREEMPTIVE;
@@ -146,7 +146,7 @@ void nrk_create_taskset()
     
     nrk_task_set_entry_function( &TaskTwo, Task2);
     nrk_task_set_stk( &TaskTwo, Stack2, NRK_APP_STACKSIZE);
-    TaskTwo.prio = 1;
+    TaskTwo.prio = 2;
     TaskTwo.FirstActivation = TRUE;
     TaskTwo.Type = BASIC_TASK;
     TaskTwo.SchType = PREEMPTIVE;
@@ -161,7 +161,7 @@ void nrk_create_taskset()
     
     nrk_task_set_entry_function( &TaskThree, Task3);
     nrk_task_set_stk( &TaskThree, Stack3, NRK_APP_STACKSIZE);
-    TaskThree.prio = 2;
+    TaskThree.prio = 1;
     TaskThree.FirstActivation = TRUE;
     TaskThree.Type = BASIC_TASK;
     TaskThree.SchType = PREEMPTIVE;
